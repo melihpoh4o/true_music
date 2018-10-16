@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+
+
 }
 
 body{
@@ -71,12 +73,12 @@ section, footer{
 
 @media all and (min-width: 550px){
     section#nieuws{
-        width: 40%;
+        width: 30%;
         float: left;
     }
 
     section#instrumenten{
-        width: 60%;
+        width: 70%;
         float: right;
     }
 
@@ -90,19 +92,47 @@ section, footer{
     }
 
     section#instrumenten{
+        display: grid;
+        grid:
+        "drums gitaar" 1fr
+        "saxofoon trompet" 1fr /
+        1fr 1fr;
         width: 70%;
         float: right;
     }
 
     article{
         display: inline-block;
-        width: 45%;
+        width: 90%;
         margin-right: 20px;
     }
 
     article:nth-child(even){
         margin-right: 0px;
     }
+
+    #drums {
+        grid-area: drums;
+    }
+
+    #gitaar {
+        grid-area: gitaar;
+    }
+
+    #saxofoon {
+        grid-area: saxofoon;
+    }
+
+    #trompet {
+        grid-area: trompet;
+    }
+
+    #contact{
+        grid-area: contact;
+    }
+
+
+
 }
 
 
